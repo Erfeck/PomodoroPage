@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <title>Pomodoro</title>
+</head>
+
+
+<body>
+
+    <div id = "panelTiempo" class = "panelOverlay" style="display: none;">
+        <div class = "panelContent">
+            <span class = "botonCerrar" onclick="cerrarPanel()">X</span>
+            <h2>Ingresa el tiempo de trabajo</h2>
+            <input type="text" id="newTimerWork" value="25" placeholder="Indica el timerWork...">
+            <br><br>
+            <h2>Ingresa el tiempo de descanso</h2>
+            <input type="text" id="newTimerBreak" value="5" placeholder="Indica el timerBreak...">
+            <br><br>
+            <button onclick="guardarDato()">Guardar</button>
+        </div>
+    </div>
+
+    <section class="container">
+
+        <hr>
+
+        <h2 id="titulo">Start Working!</h2>
+        <br>
+
+        <!-- Temporizador de Trabajo -->
+        <div id="timerWork" class="timerStop">
+            <p id="workMinutes">25</p>
+            <p>:</p>
+            <p id="workSeconds">00</p>
+        </div>
+
+        <!-- Temporizador de Descanso -->
+        <!-- <div id="timerBreak" class="timerBreak1" style="display: none" style="height: 100px;"> -->
+        <div id="timerBreak" class="timerBreak" style="display: none">
+            <p id="breakMinutes">05</p>
+            <p>:</p>
+            <p id="breakSeconds">00</p>
+        </div>
+
+        <img id="catImage" src="img/catWelcome.png">
+
+        <hr>
+
+        <div class="buttons">
+            <i id="start" class="fa-solid fa-play iconDesign"></i>
+            <i id="pause" style="display: none;" class="fa-solid fa-pause iconDesign"></i>
+            <i id="reset" style="display: none;" class="fa-solid fa-rotate-right iconDesign"></i>
+            <i id="config" class="fa-solid fa-sliders iconDesign"></i>
+        </div>
+
+    </section>
+    <script src="https://kit.fontawesome.com/f936b9a463.js" crossorigin="anonymous"></script>
+</body>
+</html>
